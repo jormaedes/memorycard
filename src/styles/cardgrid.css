@@ -1,0 +1,7 @@
+.card_grid {
+	padding: 25px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 18px;
+}
