@@ -7,7 +7,7 @@ import shuffle from './utils/shuffle';
 import './App.css'
 import Finish from './components/Finish';
 
-const NUMBERS = 3
+const NUMBERS = 16
 
 function App() {
 	const [ids, setIds] = useState(getRandomIds(NUMBERS));
