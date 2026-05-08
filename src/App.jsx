@@ -1,6 +1,5 @@
 import { use, useEffect, useState } from 'react'
 import Header from './components/Header';
-import Win from './components/Finish';
 import getRandomIds from './utils/getRandomsIds';
 import CardGrid from './components/CardGrid';
 import shuffle from './utils/shuffle';
