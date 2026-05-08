@@ -1,12 +1,12 @@
 import Card from "./Card"
 
-export default function CardGrid(listPkms)
+export default function CardGrid({listPkms, handleCliced})
 {
 	return (
 		<main className="card_grid">
 			{
 				listPkms.map(pkm=>{
-					<Card name={pkm.name} image={pkm.sprites.other['official-artwork'].front_default}/>
+					<Card handleCliced={handleCliced} name={pkm._name} image={pkm.sprites.other['official-artwork'].front_default}/>
 				})
 			}
 		</main>
