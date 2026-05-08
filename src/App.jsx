@@ -1,12 +1,15 @@
 import { use, useEffect, useState } from 'react'
 import Header from './components/Header';
+import Win from './components/Win';
 import getRandomIds from './utils/getRandomsIds';
 import CardGrid from './components/CardGrid';
 import shuffle from './utils/shuffle';
 import './App.css'
 
+const NUMBERS = 3
+
 function App() {
-	const [ids, setIds] = useState(getRandomIds(16));
+	const [ids, setIds] = useState(getRandomIds(NUMBERS));
 	const [bestScore, setBestScore] = useState(0);
 	const [score, setScore] = useState(0);
 	const [loading, setLoading] = useState(true);
@@ -64,6 +67,23 @@ function App() {
 		shuffle(pkms);
 	}
 
+	function handlePlayAgain()
+	{
+		setIds(getRandomIds(NUMBERS));
+		setClickeds([]);
+		setScore(0);
+		setPkms([])
+		setLoading(true);
+	}
+	
+	let win = clikeds.length !== 0 && clikeds.length === pkms.length;
+
+	if (win) return (
+		<>
+			<Header score={score} bestScore={bestScore} />
+			<Win handlePlayAgain={handlePlayAgain}/>
+		</>
+	)
 	if (loading) return <p>A carregar Pokémon...</p>;
   	if (error)   return <p>Erro: {error}</p>;
 	
