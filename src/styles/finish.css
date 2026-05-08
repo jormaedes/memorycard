@@ -1,3 +1,12 @@
+@keyframes buttonScale {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.08);
+	}
+}
+
 .finish_container {
 	display: flex;
 	justify-content: center;
@@ -26,10 +35,18 @@
 	color: var(--text);
 	cursor: pointer;
 	font-size: 18px;
+	transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .finish_content button:hover {
 	background: var(--bg-gradient-rev);
+	transform: scale(1.08);
+	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.finish_content button:active {
+	transform: scale(0.96);
 }
 
 .win {

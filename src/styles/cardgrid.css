@@ -5,3 +5,21 @@
 	justify-content: center;
 	gap: 18px;
 }
+
+/* Animações de entrada escalonadas para cada card */
+.card_grid .card:nth-child(1) { animation-delay: 0.05s; }
+.card_grid .card:nth-child(2) { animation-delay: 0.1s; }
+.card_grid .card:nth-child(3) { animation-delay: 0.15s; }
+.card_grid .card:nth-child(4) { animation-delay: 0.2s; }
+.card_grid .card:nth-child(5) { animation-delay: 0.25s; }
+.card_grid .card:nth-child(6) { animation-delay: 0.3s; }
+.card_grid .card:nth-child(7) { animation-delay: 0.35s; }
+.card_grid .card:nth-child(8) { animation-delay: 0.4s; }
+.card_grid .card:nth-child(9) { animation-delay: 0.45s; }
+.card_grid .card:nth-child(10) { animation-delay: 0.5s; }
+.card_grid .card:nth-child(11) { animation-delay: 0.55s; }
+.card_grid .card:nth-child(12) { animation-delay: 0.6s; }
+.card_grid .card:nth-child(13) { animation-delay: 0.65s; }
+.card_grid .card:nth-child(14) { animation-delay: 0.7s; }
+.card_grid .card:nth-child(15) { animation-delay: 0.75s; }
+.card_grid .card:nth-child(16) { animation-delay: 0.8s; }
