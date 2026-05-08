@@ -5,9 +5,9 @@ export default function CardGrid({listPkms, handleCliced})
 	return (
 		<main className="card_grid">
 			{
-				listPkms.map(pkm=>{
-					<Card handleCliced={handleCliced} name={pkm._name} image={pkm.sprites.other['official-artwork'].front_default}/>
-				})
+				listPkms.map(e => 
+					<Card key={e.id} id={e.id} name={e.name} handleCliced={handleCliced} image={e.image}/>
+				)
 			}
 		</main>
 	)
