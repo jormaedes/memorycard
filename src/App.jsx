@@ -1,10 +1,11 @@
 import { use, useEffect, useState } from 'react'
 import Header from './components/Header';
-import Win from './components/Win';
+import Win from './components/Finish';
 import getRandomIds from './utils/getRandomsIds';
 import CardGrid from './components/CardGrid';
 import shuffle from './utils/shuffle';
 import './App.css'
+import Finish from './components/Finish';
 
 const NUMBERS = 3
 
@@ -16,6 +17,7 @@ function App() {
 	const [pkms, setPkms] = useState([]);
 	const [error, setError] = useState(null);
 	const [clikeds, setClickeds] = useState([]);
+	const [flag, setFlag] = useState(0);
 
 	useEffect(() => {
 		let cancelled = false;
@@ -60,7 +62,10 @@ function App() {
 	}, [score])
 
 	function handleCliced(id) {
-		if (clikeds.includes(id)) return -1;
+		if (clikeds.includes(id)) {
+			setFlag(1);
+			return ;
+		}
 		setScore(a => a + 1);
 		const nClikeds = [...clikeds, id];
 		setClickeds(nClikeds);
@@ -74,6 +79,7 @@ function App() {
 		setScore(0);
 		setPkms([])
 		setLoading(true);
+		setFlag(0);
 	}
 	
 	let win = clikeds.length !== 0 && clikeds.length === pkms.length;
@@ -81,9 +87,17 @@ function App() {
 	if (win) return (
 		<>
 			<Header score={score} bestScore={bestScore} />
-			<Win handlePlayAgain={handlePlayAgain}/>
+			<Finish handlePlayAgain={handlePlayAgain} text={"You won!"} description={"You have an enviable memory."}/>
 		</>
 	)
+
+	if (flag) return (
+		<>
+			<Header score={score} bestScore={bestScore} />
+			<Finish cName="lose" handlePlayAgain={handlePlayAgain} text={"You lose!"} description={"What a shame."}/>
+		</>
+	)
+
 	if (loading) return <p>A carregar Pokémon...</p>;
   	if (error)   return <p>Erro: {error}</p>;
 	
