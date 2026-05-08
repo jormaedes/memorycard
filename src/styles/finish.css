@@ -1,0 +1,41 @@
+.finish_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+}
+
+.finish_content {
+	display: flex;
+	/* background: var(--text);
+	color: var(--text-muted); */
+	padding: 16px;
+	border-radius: 8px;
+	flex-direction: column;
+	gap: 16px;
+	text-align: center;
+	font-size: 30px;
+}
+
+.finish_content button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 8px;
+	background: var(--bg-gradient);
+	font-family: var(--font-family);
+	color: var(--text);
+	cursor: pointer;
+	font-size: 18px;
+}
+
+.finish_content button:hover {
+	background: var(--bg-gradient-rev);
+}
+
+.win {
+	color: green;
+}
+
+.lose {
+	color: red;
+}

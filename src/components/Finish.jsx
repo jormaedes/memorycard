@@ -1,3 +1,5 @@
+import '../styles/finish.css'
+
 export default function Finish({ cName='win', handlePlayAgain , text, description}) {
 	return (
 		<section className="finish_container">
