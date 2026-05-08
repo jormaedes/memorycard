@@ -1,0 +1,17 @@
+.container {
+	width: 90vw;
+	margin: 0 auto;
+}
+
+.header_container {
+	background: var(--bg-gradient);
+	padding: 20px 0;
+}
+
+.header_game_info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+	gap: 8px;
+}
