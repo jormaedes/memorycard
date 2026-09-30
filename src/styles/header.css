@@ -1,17 +1,93 @@
 .container {
-	width: 90vw;
+	width: min(calc(100% - 48px), var(--content-width));
 	margin: 0 auto;
 }
 
 .header_container {
-	background: var(--bg-gradient);
-	padding: 20px 0;
+	position: relative;
+	background: linear-gradient(112deg, rgba(44, 15, 18, 0.98), rgba(107, 30, 35, 0.94));
+	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+	padding: 22px 0 18px;
 }
 
 .header_game_info {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 12px;
-	gap: 8px;
+	gap: 24px;
+}
+
+.title_game {
+	font-size: clamp(1.35rem, 3vw, 2rem);
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: 0;
+}
+
+.title_game::before {
+	content: 'POKÉMON / MEMORY GAME';
+	display: block;
+	margin-bottom: 7px;
+	color: rgba(255, 255, 255, 0.66);
+	font-size: 0.62rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+}
+
+.score_container {
+	display: flex;
+	gap: 10px;
+}
+
+.score_point,
+.best_score_point {
+	min-width: 112px;
+	padding: 9px 13px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 6px;
+	background: rgba(13, 13, 26, 0.24);
+	font-size: 0.76rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+.score_point {
+	background: rgba(13, 13, 26, 0.5);
+	font-weight: 700;
+}
+
+.header_decription {
+	margin-top: 18px;
+	color: rgba(255, 255, 255, 0.76);
+	font-size: 0.82rem;
+}
+
+@media (max-width: 540px) {
+	.container {
+		width: min(calc(100% - 32px), var(--content-width));
+	}
+
+	.header_container {
+		padding: 18px 0 15px;
+	}
+
+	.header_game_info {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.score_container {
+		width: 100%;
+	}
+
+	.score_point,
+	.best_score_point {
+		flex: 1;
+	}
+
+	.header_decription {
+		margin-top: 13px;
+		font-size: 0.75rem;
+	}
 }

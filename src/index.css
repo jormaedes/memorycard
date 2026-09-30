@@ -6,11 +6,32 @@
 	--bg-color: #0d0d1a;
 	--card-shadow: #7c3aed;
 	--text: #fff;
-	--text-muted: #000;
-	--font-family: 'Roboto', sans-serif;
+	--text-muted: rgba(255, 255, 255, 0.62);
+	--font-family: 'Poppins', sans-serif;
+	--content-width: 1120px;
 }
 
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	min-width: 320px;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+	background:
+		radial-gradient(ellipse at 50% 0%, rgba(107, 30, 35, 0.2), transparent 48%),
+		var(--bg-color);
+	color: var(--text);
+	font-family: var(--font-family);
+	-webkit-font-smoothing: antialiased;
+}
+
+button {
+	font: inherit;
 }

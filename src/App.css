@@ -1,9 +1,3 @@
-body {
-	background: var(--bg-color);
-	color: var(--text);
-	font-family: var(--font-family);
-}
-
 #root {
 	display: flex;
 	flex-direction: column;

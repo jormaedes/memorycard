@@ -86,14 +86,14 @@ function App() {
 	if (win) return (
 		<>
 			<Header score={score} bestScore={bestScore} />
-			<Finish handlePlayAgain={handlePlayAgain} text={"You won!"} description={"You have an enviable memory."}/>
+			<Finish handlePlayAgain={handlePlayAgain} score={score} bestScore={bestScore} text={"You won!"} description={"Every Pokémon, no repeats. That is a run worth remembering."}/>
 		</>
 	)
 
 	if (flag) return (
 		<>
 			<Header score={score} bestScore={bestScore} />
-			<Finish cName="lose" handlePlayAgain={handlePlayAgain} text={"You lose!"} description={"What a shame."}/>
+			<Finish cName="lose" handlePlayAgain={handlePlayAgain} score={score} bestScore={bestScore} text={"Round over."} description={"One familiar face caught you out. Ready for another try?"}/>
 		</>
 	)
 
