@@ -166,10 +166,9 @@
 @media (prefers-reduced-motion: reduce) {
 	.finish_content {
 		animation: none;
+		text-align: center;
+		font-size: 30px;
 	}
-}
-	text-align: center;
-	font-size: 30px;
 }
 
 .finish_content button {
